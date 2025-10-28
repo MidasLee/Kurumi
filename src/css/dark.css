@@ -1,12 +1,3 @@
-/**
- * @Author: Midas 1010500226@qq.com
- * @Date: 2025-02-25 15:41:34
- * @LastEditors: Midas 1010500226@qq.com
- * @LastEditTime: 2025-04-28 10:41:51
- * @FilePath: static/js/theme/kurumi-chat-dark-glass.css
- * @Description: 这是默认设置,可以在设置》工具》File Description中进行配置
- */
-
 .kurumi-chat-layui-layer-min {
     filter: invert(100%);
 }
