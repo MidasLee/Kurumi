@@ -1,0 +1,219 @@
+{
+  "id": "4776182",
+  "name": "ultra-chat",
+  "font_family": "ultra-chat-iconfont",
+  "css_prefix_text": "ultra-chat-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31176693",
+      "name": "文档生成",
+      "font_class": "document-generate",
+      "unicode": "e705",
+      "unicode_decimal": 59141
+    },
+    {
+      "icon_id": "1569272",
+      "name": "文档下载",
+      "font_class": "document-download",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "25638507",
+      "name": "文档导出",
+      "font_class": "document-export",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "15838511",
+      "name": "播放音频",
+      "font_class": "play-audio",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "23125240",
+      "name": "主题",
+      "font_class": "theme",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "43686464",
+      "name": "语音转文字",
+      "font_class": "speech-to-text",
+      "unicode": "e7a9",
+      "unicode_decimal": 59305
+    },
+    {
+      "icon_id": "10231197",
+      "name": "保密知识增强",
+      "font_class": "secrecy-knowledge-enhancement",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "24942989",
+      "name": "保密问答助手",
+      "font_class": "secrecy-chat-assistant",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7227317",
+      "name": "指挥助手",
+      "font_class": "command-assistant",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "16835315",
+      "name": "智能核文",
+      "font_class": "doc-checker",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "34694639",
+      "name": "鉴定辅助",
+      "font_class": "summary-generator",
+      "unicode": "e964",
+      "unicode_decimal": 59748
+    },
+    {
+      "icon_id": "8157541",
+      "name": "会议纪要",
+      "font_class": "meeting-minutes",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "1167180",
+      "name": "删除",
+      "font_class": "delete",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "8288873",
+      "name": "设置",
+      "font_class": "setting",
+      "unicode": "e851",
+      "unicode_decimal": 59473
+    },
+    {
+      "icon_id": "42510244",
+      "name": "新建对话",
+      "font_class": "new-chat",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "42710258",
+      "name": "历史对话",
+      "font_class": "chat-history",
+      "unicode": "ee78",
+      "unicode_decimal": 61048
+    },
+    {
+      "icon_id": "5379859",
+      "name": "返回",
+      "font_class": "back",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "12865680",
+      "name": "菜单",
+      "font_class": "menu",
+      "unicode": "e6ec",
+      "unicode_decimal": 59116
+    },
+    {
+      "icon_id": "672034",
+      "name": "收起",
+      "font_class": "collapse",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "14122685",
+      "name": "展开",
+      "font_class": "expand",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "13074962",
+      "name": "关闭",
+      "font_class": "close",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "39482221",
+      "name": "固定",
+      "font_class": "pin",
+      "unicode": "ec98",
+      "unicode_decimal": 60568
+    },
+    {
+      "icon_id": "39482222",
+      "name": "放开",
+      "font_class": "unpin",
+      "unicode": "ec99",
+      "unicode_decimal": 60569
+    },
+    {
+      "icon_id": "1090110",
+      "name": "编辑",
+      "font_class": "edit",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "11215209",
+      "name": "复制",
+      "font_class": "copy",
+      "unicode": "e6f5",
+      "unicode_decimal": 59125
+    },
+    {
+      "icon_id": "32162413",
+      "name": "清除",
+      "font_class": "clear",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "15838547",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "3640135",
+      "name": "语音",
+      "font_class": "voice",
+      "unicode": "e8f7",
+      "unicode_decimal": 59639
+    },
+    {
+      "icon_id": "12719937",
+      "name": "发送",
+      "font_class": "send",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "36519798",
+      "name": "AI助手",
+      "font_class": "ai-assistant",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    }
+  ]
+}

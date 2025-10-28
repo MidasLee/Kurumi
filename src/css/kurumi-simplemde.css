@@ -1,0 +1,17 @@
+.kurumi-chat-simplemde-layui-layer-content .CodeMirror-fullscreen {
+    width: 100% !important;
+    height: calc(100% - 50px) !important;
+}
+
+.kurumi-chat-simplemde-layui-layer-content .CodeMirror-fullscreen .CodeMirror-scroll {
+    width: calc(100% - 30px) !important;
+    height: calc(100% - 30px) !important;
+}
+
+.kurumi-chat-simplemde-layui-layer-content .editor-statusbar .lines::before {
+    content: "行数：";
+}
+
+.kurumi-chat-simplemde-layui-layer-content .editor-statusbar .words::before {
+    content: "字数：";
+}

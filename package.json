@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "main": "dist/kurumi-chat.js",
+  "module": "src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "imports-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "font-awesome": "^4.7.0",
+    "simplemde": "^1.11.2"
+  }
+}

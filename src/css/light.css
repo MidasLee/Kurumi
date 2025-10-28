@@ -1,0 +1,1114 @@
+/**
+ * @Author: Midas 1010500226@qq.com
+ * @Date: 2025-02-25 15:41:24
+ * @LastEditors: Midas 1010500226@qq.com
+ * @LastEditTime: 2025-04-28 21:35:54
+ * @FilePath: static/js/theme/kurumi-chat-light.css
+ * @Description: 这是默认设置,可以在设置》工具》File Description中进行配置
+ */
+
+.kurumi-chat-layui-layer {
+    background-color: white;
+}
+
+.kurumi-chat-layui-layer-title {
+    color: black;
+}
+
+/* 弹窗容器 */
+.kurumi-chat-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 左侧侧边栏 */
+.kurumi-chat-left-sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 新会话按钮 */
+.kurumi-chat-new-session-btn {
+    width: calc(100% - 24px);
+    margin: 12px auto;
+    padding: 10px 16px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.kurumi-chat-new-session-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* 会话列表 */
+.kurumi-chat-sessions-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 8px;
+}
+
+/* 会话编辑按钮 */
+.kurumi-chat-session-edit-btn {
+    background: transparent;
+    border: none;
+    color: #8e8e93;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.session-save-btn {
+    background: transparent;
+    border: none;
+    color: #34c759;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.kurumi-chat-session-edit-btn:hover,
+.session-save-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+/* 鼠标悬停会话卡片时显示编辑按钮 */
+.kurumi-chat-session-item:hover .kurumi-chat-session-edit-btn {
+    display: inline-block;
+}
+
+/* 会话标题输入框 */
+.kurumi-chat-session-title-input {
+    width: calc(100% - 26px);
+    background: #ffffff;
+    border: 1px solid #d1d1d6;
+    border-radius: 6px;
+    padding: 6px 8px;
+    color: #000000;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.kurumi-chat-session-title-input:focus {
+    border-color: #007aff;
+}
+
+.kurumi-chat-session-item {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kurumi-chat-session-item.active {
+    background-color: #e6f0ff;
+    border-left: 3px solid #0d6efd;
+}
+
+.kurumi-chat-session-item:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.kurumi-chat-session-title {
+    font-size: 14px;
+    color: #212529;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kurumi-chat-session-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.kurumi-chat-session-delete-btn {
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.kurumi-chat-session-item:hover .kurumi-chat-session-delete-btn {
+    opacity: 1;
+}
+
+.kurumi-chat-session-delete-btn:hover {
+    color: #dc3545;
+    background-color: #f8d7da;
+}
+
+/* 侧边栏底部 */
+.kurumi-chat-sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.kurumi-chat-app-switch,
+.kurumi-chat-theme-switch {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f1f3f5;
+    color: #495057;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    margin-right: 8px;
+}
+
+/* 图片上传按钮样式 */
+.kurumi-chat-upload-btn {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 8px;
+}
+
+.kurumi-chat-upload-btn:hover {
+    background-color: #e9ecef;
+}
+
+/* 图片预览区域样式 */
+.kurumi-chat-image-preview-area {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* 图片预览项样式 */
+.kurumi-chat-image-preview {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    background-color: white;
+}
+
+/* 预览图片样式 */
+.kurumi-chat-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 移除预览图按钮样式 */
+.kurumi-chat-preview-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #dc3545;
+    transition: all 0.3s;
+}
+
+.kurumi-chat-preview-remove:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* 消息中的图片样式 */
+.dynamic-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.kurumi-chat-app-switch:hover,
+.kurumi-chat-theme-switch:hover {
+    background-color: #e9ecef;
+}
+
+/* App选择菜单样式 */
+.kurumi-chat-app-menu {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    z-index: 19891016;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.kurumi-chat-app-menu-header {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kurumi-chat-app-menu-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.kurumi-chat-app-menu-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.kurumi-chat-app-menu-close:hover {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.kurumi-chat-app-menu-list {
+    padding: 8px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.kurumi-chat-app-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.kurumi-chat-app-item:hover {
+    background: #f5f5f5;
+}
+
+.kurumi-chat-app-item.active {
+    background: #e8f0fe;
+    border-color: #3b82f6;
+}
+
+.kurumi-chat-app-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.kurumi-chat-app-info {
+    flex: 1;
+    text-align: left;
+}
+
+.kurumi-chat-app-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.kurumi-chat-app-description {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.kurumi-chat-theme-switch:hover {
+    background-color: #e9ecef;
+}
+
+/* 右侧主内容区 */
+.kurumi-chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 聊天内容区 */
+.kurumi-chat-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 空状态 */
+.kurumi-chat-empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    gap: 12px;
+}
+
+.kurumi-chat-empty-state img {
+    width: 68px;
+    height: 68px;
+}
+
+.kurumi-chat-empty-state p {
+    font-size: 16px;
+    text-align: center;
+    max-width: 300px;
+}
+
+/* 聊天消息 */
+.kurumi-chat-message {
+    display: flex;
+    gap: 12px;
+    max-width: 80%;
+}
+
+.kurumi-chat-message-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.kurumi-chat-message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kurumi-chat-message-user .kurumi-chat-message-avatar {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-avatar {
+    background-color: #20c997;
+    color: white;
+}
+
+.kurumi-chat-message-content {
+    padding: 12px 16px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    max-width: calc(100% - 48px);
+    box-sizing: border-box;
+    /* 确保 padding 不影响宽度计算 */
+}
+
+.kurumi-chat-message-user .kurumi-chat-message-content {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.kurumi-chat-message-nickname {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #6c757d;
+}
+
+.kurumi-chat-message-user .kurumi-chat-message-nickname {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: right;
+}
+
+.kurumi-chat-message-text {
+    font-size: 14px;
+    white-space: pre-wrap;
+    /* 保留换行符，但长文本自动换行 */
+    word-break: break-all;
+    /* 关键：强制长单词/无空格文本换行 */
+    word-wrap: break-word;
+    /* 兼容旧浏览器，确保长文本换行 */
+    max-width: 100%;
+    /* 限制内容最大宽度为父容器宽度 */
+    overflow-wrap: break-word;
+    /* 防止长文本溢出 */
+}
+
+.dynamic-content {
+    /* 核心：限制单行最大宽度，超出自动换行，不纵向拉伸 */
+    max-width: 100%;
+    word-break: break-word;
+    /* 优先按单词拆分（保留英文单词完整性） */
+    overflow-wrap: anywhere;
+    /* 极端长文本强制截断（如无空格英文） */
+    white-space: normal !important;
+    /* 覆盖pre-wrap，流式时不保留多余换行 */
+}
+
+.kurumi-chat-message-user .kurumi-chat-message-text {
+    color: white;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text {
+    color: black;
+}
+
+/* 消息时间 */
+.kurumi-chat-message-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.kurumi-chat-message:hover .kurumi-chat-message-actions {
+    opacity: 1;
+}
+
+.kurumi-chat-message-action-btn {
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.kurumi-chat-message-action-btn:hover {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+    color: #1890ff;
+}
+
+.kurumi-chat-message-time {
+    font-size: 11px;
+    color: #adb5bd;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.kurumi-chat-message-user .kurumi-chat-message-time {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 输入区域 */
+.kurumi-chat-input-area {
+    padding: 16px;
+    background-color: white;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* 模型选择器 */
+.kurumi-chat-model-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    background-color: white;
+    font-size: 13px;
+    color: #495057;
+    cursor: pointer;
+    width: 160px;
+}
+
+.kurumi-chat-input-wrapper{
+    flex: 1;
+    display: flex;
+    gap: 8px;
+}
+
+/* 输入框 */
+.kurumi-chat-message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 24px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.kurumi-chat-message-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+/* 发送按钮 */
+.kurumi-chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.kurumi-chat-send-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* 加载气泡动画 */
+.kurumi-chat-loading-bubbles {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+.kurumi-chat-loading-bubbles .bubble {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    animation: bubblePulse 1.4s infinite ease-in-out both;
+}
+
+.kurumi-chat-loading-bubbles .bubble:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.kurumi-chat-loading-bubbles .bubble:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bubblePulse {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* 错误消息 */
+.kurumi-chat-error-message {
+    color: #dc3545;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #f8d7da;
+    border-radius: 8px;
+}
+
+/* 提示框 */
+.kurumi-chat-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: #343a40;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 19891016;
+}
+
+.kurumi-chat-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kurumi-chat-toast-success {
+    background-color: #28a745;
+}
+
+.kurumi-chat-toast-error {
+    background-color: #dc3545;
+}
+
+.kurumi-chat-toast-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* 右下角助手按钮 */
+.kurumi-chat-fixed-button {
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    z-index: 19891016;
+}
+
+/* 气泡框样式 */
+.kurumi-chat-fixed-button::before {
+    content: 'Hi！我是Kurumi';
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 18px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 19891015;
+}
+
+/* 气泡框小三角 */
+.kurumi-chat-fixed-button::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom: 4px;
+    border: 8px solid transparent;
+    border-top-color: #ff6b6b;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 19891015;
+}
+
+/* 鼠标悬停时显示气泡框并增强按钮效果 */
+.kurumi-chat-fixed-button:hover::before,
+.kurumi-chat-fixed-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.kurumi-chat-fixed-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.kurumi-chat-button-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* 无会话提示 */
+.kurumi-chat-no-sessions {
+    text-align: center;
+    padding: 24px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f3f5;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #868e96;
+}
+
+/* 思考内容样式 - 亮色主题：灰色文字+浅灰背景，与白色答案区区分 */
+think {
+    display: block;
+    font-size: 13px;
+    /* 比答案文字小1px，视觉上区分层级 */
+    color: #6c757d;
+    /* 浅灰色，与答案的黑色/蓝色区分 */
+    background-color: #f8f9fa;
+    /* 极浅灰背景，增加区域感 */
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border-left: 3px solid #adb5bd;
+    /* 左侧灰色边框，强化视觉区分 */
+}
+
+/* 思考内容标题（可选，若有“思考内容：”前缀） */
+think::before {
+    content: "思考内容：";
+    font-weight: 500;
+    color: #495057;
+    /* 比正文深一点，突出标题 */
+    margin-right: 4px;
+}
+
+/* ------------------------------
+   亮色主题 - .kurumi-chat-message-text 内部美化（缩减间隔）
+   ------------------------------ */
+/* 1. 段落文本（缩减上下边距+行高） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text p {
+    margin: 4px 0;
+    /* 原8px→4px，缩减段落间距 */
+    line-height: 1.4;
+    /* 原1.6→1.4，缩减行高 */
+    word-break: break-all;
+    color: #212529;
+}
+
+/* 2. 标题样式（缩减上下边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text h1 {
+    margin: 12px 0 6px;
+    /* 原16px/8px→12px/6px */
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #212529;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+    /* 原4px→3px，缩减标题下内边距 */
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text h2 {
+    margin: 12px 0 6px;
+    /* 原16px/8px→12px/6px */
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #212529;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+    /* 原4px→3px */
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text h3 {
+    margin: 12px 0 6px;
+    /* 原16px/8px→12px/6px */
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #212529;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text h4,
+.kurumi-chat-message-assistant .kurumi-chat-message-text h5,
+.kurumi-chat-message-assistant .kurumi-chat-message-text h6,
+.kurumi-chat-message-assistant .kurumi-chat-message-text h5,
+.kurumi-chat-message-assistant .kurumi-chat-message-text h6 {
+    margin: 10px 0 4px;
+    /* 原16px/8px→10px/4px，更小间距 */
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #212529;
+}
+
+/* 3. 代码样式（缩减上下边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text code {
+    padding: 0;
+    /* 原2px/4px→1px/3px，缩减行内代码内边距 */
+    border-radius: 4px;
+    font-family: "Menlo", "Monaco", "Consolas", monospace;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #d32f2f;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text pre {
+    margin: 8px 0;
+    /* 原12px→8px，缩减代码块间距 */
+    padding: 10px;
+    /* 原12px→10px，缩减代码块内边距 */
+    border-radius: 6px;
+    font-family: "Menlo", "Monaco", "Consolas", monospace;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #212529;
+    overflow-x: auto;
+}
+
+/* 4. 列表样式（缩减上下边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text ul,
+.kurumi-chat-message-assistant .kurumi-chat-message-text ol {
+    margin: 6px 0 6px 22px;
+    /* 原8px→6px，缩减列表间距；左缩进24px→22px */
+    padding-left: 6px;
+    /* 原8px→6px */
+    color: #212529;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text li {
+    margin: 3px 0;
+    /* 原4px→3px，缩减列表项间距 */
+    line-height: 1.4;
+    /* 原1.5→1.4 */
+    color: inherit;
+}
+
+.kurumi-chat-message-assistant .kurumi-chat-message-text ul ul,
+.kurumi-chat-message-assistant .kurumi-chat-message-text ul ol,
+.kurumi-chat-message-assistant .kurumi-chat-message-text ol ul,
+.kurumi-chat-message-assistant .kurumi-chat-message-text ol ol {
+    margin: 3px 0 3px 14px;
+    /* 原4px→3px，左缩进16px→14px */
+}
+
+/* 5. 分割线（缩减上下边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text hr {
+    margin: 0;
+    /* 原16px→12px，缩减分割线间距 */
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* 6. 引用块（缩减上下边距+内边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text blockquote {
+    margin: 8px 0;
+    /* 原12px→8px */
+    padding: 6px 10px;
+    /* 原8px/12px→6px/10px */
+    border-left: 3px solid #0d6efd;
+    border-radius: 0 4px 4px 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #495057;
+    line-height: 1.4;
+    /* 新增行高控制 */
+}
+
+/* 7. 图片（缩减上下边距） */
+.kurumi-chat-message-assistant .kurumi-chat-message-text img {
+    max-width: 100%;
+    height: auto;
+    margin: 6px 0;
+    /* 原8px→6px */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 基础表格样式 - 全边框、清晰分隔 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+}
+
+/* 所有单元格都有边框 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table th,
+.kurumi-chat-message-assistant .kurumi-chat-message-text table td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+    word-break: break-word;
+}
+
+/* 表头样式 - 深色背景 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table th {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+}
+
+/* 表格行交替颜色 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* 悬停效果 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table tr:hover {
+    background-color: #e0e7ff;
+}
+
+/* 第一列不加宽 - 均匀分配列宽 */
+.kurumi-chat-message-assistant .kurumi-chat-message-text table th:first-child,
+.kurumi-chat-message-assistant .kurumi-chat-message-text table td:first-child {
+    width: auto;
+}
+
+/* 确认对话框样式 */
+.kurumi-chat-confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 19891016;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kurumi-chat-confirm-overlay.show {
+    opacity: 1;
+}
+
+.kurumi-chat-confirm-box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.kurumi-chat-confirm-box.show {
+    transform: scale(1);
+}
+
+.kurumi-chat-confirm-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.kurumi-chat-confirm-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.kurumi-chat-confirm-body {
+    padding: 20px;
+}
+
+.kurumi-chat-confirm-body p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.kurumi-chat-confirm-footer {
+    padding: 12px 20px 16px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.kurumi-chat-confirm-cancel,
+.kurumi-chat-confirm-ok {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.kurumi-chat-confirm-cancel {
+    background: #f5f5f5;
+    color: #666666;
+}
+
+.kurumi-chat-confirm-cancel:hover {
+    background: #e0e0e0;
+}
+
+.kurumi-chat-confirm-ok {
+    background: #007bff;
+    color: #ffffff;
+}
+
+.kurumi-chat-confirm-ok:hover {
+    background: #0056b3;
+}
