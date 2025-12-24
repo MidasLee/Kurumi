@@ -7,7 +7,7 @@
 > Hi！我是Kurumi，一个轻量级、可嵌入的聊天助手组件，使用 webpack 方式打包，旨在将所有 JS 脚本、CSS 样式表、插件和静态文件等全部打包到一个 JS 文件中，方便在现存的B/S架构项目中直接引入使用。
 
 <div align=center>
-    <a href="./readme.md">中文文档</a> | <a href="./readme-en.md">英文文档</a>
+    <a href="./README.md">中文文档</a> | <a href="./README_EN.md">英文文档</a>
 </div>
 
 ## 功能特点

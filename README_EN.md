@@ -7,7 +7,7 @@
 > Hi! I'm Kurumi, a lightweight, embeddable chat assistant component packaged using webpack. It aims to package all JS scripts, CSS style sheets, plugins, and static files into a single JS file for easy integration into existing B/S architecture projects.
 
 <div align=center>
-    <a href="./readme.md">Chinese Documentation</a> | <a href="./readme-en.md">English Documentation</a>
+    <a href="./README.md">Chinese Documentation</a> | <a href="./README_EN.md">English Documentation</a>
 </div>
 
 ## Features
